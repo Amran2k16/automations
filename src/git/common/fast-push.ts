@@ -26,6 +26,11 @@ export async function fastPush() {
     process.exit(1);
   }
 
+  if (gitDiff.length === 0) {
+    console.log("No changes detected in git diff");
+    process.exit(1);
+  }
+
   const commitMessage = await generateCommitMessage(gitDiff);
   if (!commitMessage) {
     console.error("Failed to generate commit message");
