@@ -23,7 +23,7 @@ jobs:
           npm run build
 
       - name: Run custom test-action
-        uses: ./github/actions/test-action
+        uses: ./.github/actions/test-action
         with:
           name: "World"
 
