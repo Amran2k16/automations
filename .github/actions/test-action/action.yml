@@ -1,0 +1,16 @@
+name: "Local Action : My Custom test-action"
+description: "A simple GitHub Action that prints a greeting"
+author: "Your Name"
+
+inputs:
+  name:
+    description: "The name to greet"
+    required: true
+
+outputs:
+  message:
+    description: "A greeting message"
+
+runs:
+  using: "node20"
+  main: "../dist/test-action/index.js"
