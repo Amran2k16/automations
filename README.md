@@ -20,4 +20,30 @@ Personally I use vs code runner, this lets me right click on any file and hit ru
 
 Each automation script is written as an exported function that allows other scripts to also use it. To facilitate running the script directly, I check if the the script is being executed directly and not being imported by another script.
 
-## Git
+# Git Submodule
+
+The idea is to be able to add this repository as a git submodule to any project and have all the automation scripts available.
+
+to add the repository as a submodule run:
+
+```bash
+git submodule add git@github.com:amran2k16/automations.git automations
+```
+
+to update the submodule run:
+
+```bash
+git submodule update --init --recursive
+```
+
+to remove the submodule run:
+
+```bash
+git submodule deinit -f automations
+```
+
+to remove the submodule from the project run:
+
+```bash
+git rm -f automations
+```
