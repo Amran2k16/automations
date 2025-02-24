@@ -25,7 +25,8 @@ jobs:
       - name: Run custom test-action
         uses: ./github/actions/test-action
         with:
-          name: 'World'
+          name: "World"
 
       - name: Print greeting message
-        run: echo "Greeting message: ${{ steps.test-action.outputs.message }}"
+        run: |
+          echo "Greeting message: ${{ steps.test-action.outputs.message }}"
